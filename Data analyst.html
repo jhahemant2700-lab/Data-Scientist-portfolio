@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hemant Jha | Data Scientist Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: #f5f6fa;
+      color: #333;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 20px auto;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 100%;
+      max-width: 320px;
+      background: #fff4e6;
+      padding: 20px;
+    }
+
+    .profile {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .profile img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #ffb84d;
+      margin-bottom: 10px;
+    }
+
+    .profile h2 {
+      font-size: 20px;
+      margin-bottom: 4px;
+    }
+
+    .title {
+      font-size: 14px;
+      color: #777;
+    }
+
+    .info {
+      margin-top: 10px;
+    }
+
+    .info p {
+      font-size: 14px;
+      margin: 6px 0;
+    }
+
+    .info a {
+      color: #ff9500;
+      text-decoration: none;
+    }
+
+    .skills {
+      list-style: none;
+      margin-top: 10px;
+    }
+
+    .skills li {
+      background: #ffe4b3;
+      margin: 5px 0;
+      padding: 8px;
+      border-radius: 6px;
+    }
+
+    .cv-btn {
+      display: block;
+      background: #ffa31a;
+      color: #fff;
+      border: none;
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 15px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .cv-btn:hover {
+      background: #ff9500;
+    }
+
+    /* Main Content */
+    .main-content {
+      flex: 1;
+      padding: 30px;
+    }
+
+    .intro h1 span {
+      color: #ff9500;
+    }
+
+    .hire-btn {
+      background: #ff9500;
+      border: none;
+      padding: 10px 20px;
+      color: #fff;
+      border-radius: 6px;
+      margin-top: 15px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    section {
+      margin-top: 30px;
+    }
+
+    section h2 {
+      margin-bottom: 15px;
+      color: #333;
+      font-size: 22px;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+    }
+
+    .service {
+      background: #fff7ee;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      transition: transform 0.2s;
+    }
+
+    .service:hover {
+      transform: translateY(-5px);
+    }
+
+    ul {
+      list-style: disc inside;
+      margin-left: 10px;
+    }
+
+    @media(max-width: 900px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .main-content {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="profile">
+        <!-- Replace 'yourphoto.jpg' with your actual image file -->
+        <img src="cv photo (1).jpg" alt="Hemant Jha Photo">
+        <h2>Hemant Kumar Jha</h2>
+        <p class="title">Aspiring Data Scientist</p>
+      </div>
+
+      <div class="info">
+        <p><strong>Location:</strong> Kolkata, WB</p>
+        <p><strong>Phone:</strong> +91 7003445453</p>
+        <p><strong>Email:</strong> <a href="mailto:hemantjha811@gmail.com">hemantjha811@gmail.com</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/hemant-jha-71977b21b" target="_blank">Profile</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/hemant2745" target="_blank">github.com/hemant2745</a></p>
+      </div>
+
+      <h3 style="margin-top:15px;">Skills</h3>
+      <ul class="skills">
+        <li>Python, SQL, Power BI, Excel</li>
+        <li>Statistics, Machine Learning</li>
+        <li>Data Visualization (Matplotlib, Seaborn)</li>
+        <li>AWS (S3, EC2, RDS, SageMaker)</li>
+        <li>Git, C++, MySQL</li>
+      </ul>
+
+      <button class="cv-btn" id="downloadCv">Download CV</button>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <section class="intro">
+        <h1>Hi, I'm <span>Hemant Jha</span></h1>
+        <h2>Data Science & Analytics Enthusiast</h2>
+        <p>
+          I’m an aspiring Data Scientist skilled in Python, SQL, Power BI, and Statistics.
+          Passionate about turning raw data into actionable insights through visualization,
+          modeling, and storytelling.
+        </p>
+        <button class="hire-btn">Hire Me</button>
+      </section>
+
+      <section class="services">
+        <h2>My Projects</h2>
+        <div class="service-grid">
+          <div class="service">
+            <h3>Heart Disease Prediction</h3>
+            <p>Machine learning model to predict heart disease using patient data.</p>
+          </div>
+          <div class="service">
+            <h3>Medical Insurance Cost Prediction</h3>
+            <p>Regression model to predict insurance costs based on demographics.</p>
+          </div>
+          <div class="service">
+            <h3>Pizza Sales Dashboard</h3>
+            <p>Interactive Power BI dashboard analyzing sales trends and performance.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="certifications">
+        <h2>Certifications</h2>
+        <ul>
+          <li>Google Data Analytics — Coursera (Aug 2025)</li>
+          <li>Data Structures & Algorithms — Cipher Schools (Jul 2023)</li>
+          <li>MS Excel — Udemy (Jul 2023)</li>
+        </ul>
+      </section>
+
+      <section class="education">
+        <h2>Education</h2>
+        <ul>
+          <li><strong>B.Tech CSE</strong> — Lovely Professional University (2021–2025)</li>
+          <li><strong>Senior Secondary (XII)</strong> — Techno India Group Public School (2020)</li>
+          <li><strong>Secondary (X)</strong> — Techno India Group Public School (2018)</li>
+        </ul>
+      </section>
+
+      <section class="achievements">
+        <h2>Achievements</h2>
+        <ul>
+          <li>Solved 200+ problems on LeetCode</li>
+          <li>3-Star Rating in Python on HackerRank</li>
+        </ul>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById("downloadCv").addEventListener("click", () => {
+      window.open("Data Science.pdf", "_blank");
+    });
+  </script>
+</body>
+</html>
